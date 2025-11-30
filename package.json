@@ -1,0 +1,23 @@
+{
+  "name": "wave",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-ESxARG/wave.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "author": "operatorjen",
+  "type": "module",
+  "main": "synth.mjs",
+  "exports": {
+    ".": "./synth.mjs",
+    "./visualizer": "./visualizer.mjs"
+  },
+  "scripts": {
+    "build": "node demo/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.1"
+  }
+}

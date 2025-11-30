@@ -1,0 +1,210 @@
+body {
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+}
+
+#controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 10px;
+  background: linear-gradient(0deg, rgba(1, 1, 1, 0), rgba(1, 1, 1, 0.6));
+  display: flex;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+label {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: -0.7rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+label span {
+  font-size: 1rem;
+  margin-left: 2px;
+  line-height: 1rem;
+}
+ 
+#controls > div {
+  padding: 1%;
+  color: #eee;
+  width: 98%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input[type=range] {
+  width: 100%;
+  margin: 5% 0;
+  display: inline-block;
+}
+
+#start {
+  position: absolute;
+  bottom: 5px;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  padding: 10px;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #eee;
+  font-family: monospace;
+}
+
+.lfo-row {
+  margin-top: 5px;
+  color: #eee;
+  text-align: center;
+}
+
+.lfo-row label {
+  display: inline-block;
+  padding: 0;
+  font-size: 2.4rem;
+  margin-top: 5px;
+  line-height: 1.5rem;
+}
+
+.lfo-row input {
+  margin-top: -0.5rem;
+  display: block;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: auto;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  margin-top: -5px;
+  background: #113177d8;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background: #113177d8;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+#persona::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #2200ffff 0%,#f51870ff 33%, #13d266ff 66%, #fffcebff 100%);
+}
+
+#persona::-moz-range-track {
+  background: linear-gradient(to right, #2200ffff 0%, #f51870ff 33%, #13d266ff 66%, #fffcebff 100%);
+}
+
+#delayControl::-webkit-slider-runnable-track {
+  background: #13d266ff;
+}
+#delayControl::-moz-range-track {
+  background: #13d266ff;
+}
+
+#entropyControl::-webkit-slider-runnable-track {
+  background: #f51870ff;
+}
+#entropyControl::-moz-range-track {
+  background: #f51870ff;
+}
+
+#refinementControl::-webkit-slider-runnable-track {
+  background: #fffcebff;
+}
+#refinementControl::-moz-range-track {
+  background: #fffcebff;
+}
+
+#persona::-webkit-slider-thumb,
+#persona::-moz-range-thumb {
+  background: #00ffc8;
+}
+
+#rootNote {
+  font-size: 1.3rem;
+  display: block;
+  text-align: center;
+  background-color: rgb(51, 61, 53);
+  color: rgb(101, 141, 152);
+  padding: 5px 3px;
+  width: 80px;
+  margin: 2px;
+  border-radius: 2px;
+}
+
+.root-note-row {
+  margin: 0 7px 12px 7px;
+  display: flex;
+}
+
+.root-note-row button {
+  border: 1px solid rgb(19, 158, 205);
+  background-color: #111;
+  color: #00ffc8;
+  font-size: 2rem;
+  width: 2.5rem;
+  border-radius: 2px;
+}
+
+#field {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  z-index: 2;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 5px;
+}
+
+#field:hover {
+  background-color: #0ff;
+}
+
+@media (max-width: 575px) {
+  #controls {
+    background: linear-gradient(90deg, rgba(1, 1, 1, 0.3), rgba(1, 1, 1, 0.8) 90%);
+    display: block;
+    width: 30%;
+    padding: 0 10px;
+    border-bottom-right-radius: 5px;
+    overflow-y: scroll;
+    max-height: 80vh;
+  }
+
+  #controls > div {
+    margin-bottom: 10px;
+    height: 90px;
+  }
+}

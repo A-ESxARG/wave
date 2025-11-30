@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>wa v e.</title>
+  <meta content="width=device-width, height=device-height, user-scalable=no, initial-scale=0.9, maximum-scale=0.9, minimum-scale=0.9, target-densitydpi=device-dpi" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <button id="start">Play</button>
+  <div id="controls">
+    <div class="control-row">
+      <div class="root-note-row">
+        <button id="noteDown" type="button">−</button>
+        <span id="rootNote">C4</span>
+        <button id="noteUp" type="button">+</button>
+      </div>
+      <div class="control-row">
+      <label for="wavetablePos">🌀</label>
+      <input id="wavetablePos" type="range" min="0" max="1" step="0.01" value="0" />
+    </div>
+    </div>
+    <div class="control-row">
+      <label for="persona">
+        <span id="stageLabel">Rut</span>
+      </label>
+      <input id="persona" type="range" min="0" max="1" step="0.01" value="0" />
+      <div class="lfo-row">
+        <label for="personaLfoDepth">♒︎</label>
+        <input id="personaLfoDepth" type="range" min="0" max="1" step="0.01" value="0" />
+      </div>
+    </div>
+    <div class="control-row">
+      <label for="delayControl">🕒</label>
+      <input id="delayControl" type="range" min="0" max="1" step="0.01" value="0" />
+      <div class="lfo-row">
+        <label for="delayLfoDepth">♒︎</label>
+        <input id="delayLfoDepth" type="range" min="0" max="1" step="0.01" value="0" />
+      </div>
+    </div>
+    <div class="control-row">
+      <label for="entropyControl">🌪️</label>
+      <input id="entropyControl" type="range" min="0" max="1" step="0.01" value="0" />
+      <div class="lfo-row">
+        <label for="entropyLfoDepth">♒︎</label>
+        <input id="entropyLfoDepth" type="range" min="0" max="1" step="0.01" value="0" />
+      </div>
+    </div>
+    <div class="control-row">
+      <label for="refinementControl">💎</label>
+      <input id="refinementControl" type="range" min="0" max="1" step="0.01" value="0" />
+      <div class="lfo-row">
+        <label for="refinementLfoDepth">♒︎</label>
+        <input id="refinementLfoDepth" type="range" min="0" max="1" step="0.01" value="0" />
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./bundle.mjs"></script>
+</body>
+</html>
